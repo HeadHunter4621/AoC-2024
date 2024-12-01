@@ -1003,11 +1003,16 @@ val rawText = """80421   40193
 
 val pairList = rawText.lines()
 
-val incriment = 0
+var incriment = 0
+var pairDiff = 0
+var totalDiff = 0
 
 fun main() {
     for (elements in pairList) {
         var pair = pairList[incriment].split("   ").toTypedArray()
+        var numOne = pair[0].toInt()
+        var numTwo = pair[1].toInt()
+        println(numOne+1)
         incriment += 1
     }
 }
