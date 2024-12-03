@@ -41,7 +41,5 @@ fun main () {
         totalDifference += pairDifference
         addingIncriment += 1
     }
-    println(leftList)
-    println(rightList)
     println(totalDifference)
 }
