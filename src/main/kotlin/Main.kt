@@ -1012,13 +1012,7 @@ fun main () {
         var report = element.split(" ")
         if (checkReport(report) == true) {safeTotal += 1}
         println(report)
-    }
-    //reportTick += 1
-    /*for (element in reportList) {
-        var report = reportList[reportTick].split(" ")
-        reportTick += 1
-        if (checkReport(report) == true) {safeTotal += 1}
-    }*/
+
     println(safeTotal)
 }
 
