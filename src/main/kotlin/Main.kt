@@ -1,9 +1,16 @@
 import java.io.File
 import kotlin.math.abs
 
-val data = File("src/input.txt").readText()
+//val data = File("src/input.txt").readText()
+val data = """3   4
+4   3
+2   5
+1   3
+3   9
+3   3"""
 
 var splittingIncriment = 0
+var multiplyIncriment = 0
 var addingIncriment = 0
 
 var pairDifference = 0
@@ -11,6 +18,9 @@ var totalDifference = 0
 
 var leftList = mutableListOf<Int>()
 var rightList = mutableListOf<Int>()
+var multipliedList = mutableListOf<Int>()
+var diffList = mutableListOf<Int>()
+
 
 var sortedLeftList:List<Int> = mutableListOf<Int>()
 var sortedRightList:List<Int> = mutableListOf<Int>()
@@ -37,9 +47,7 @@ fun main () {
     }
 
     for (element in leftList) {
-        pairDifference = abs(leftList[addingIncriment] - rightList[addingIncriment])
-        totalDifference += pairDifference
-        addingIncriment += 1
+        println(rightList.count{ it == leftList[multiplyIncriment]})
     }
     println(totalDifference)
 }
