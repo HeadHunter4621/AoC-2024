@@ -1,9 +1,9 @@
 import java.io.File
 
 val input = File("input.txt").readLines().toString()
-//val input = """xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))"""
+//val input = """xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"""
 
-val regex = """mul\((\d+,\d+)\)""".toRegex()
+val regex = """(?:(?!(?:don't\(\).*?do\(\)).*?).)*mul\((\d+,\d+)\)""".toRegex()
 val mulPairList:List<String> = regex.findAll(input).map { it.groupValues[1] }.toList()
 var numOne = 0
 var numTwo = 0
