@@ -28,6 +28,10 @@ fun math(equation:String) {
     var totalLength = total.toString().length
 
     var numbersidk = mutableListOf(equation.split(" "))
-    var numbers = equation.drop(totalLength).split(" ")
-    println(numbers)
+    var numbers = equation.drop(totalLength + 2).split(" ")
+    var numCount = numbers.size
+
+
+
+    println(numCount)
 }
