@@ -12,18 +12,22 @@ val equations = """190: 10 19
 292: 11 6 16 20""".lines()
 
 var iEquation = 0
-var iPart = 0
 
 
 fun main () {
-    for (element in equations) {
-        val equationSplit = equations[iEquation].split(": ")
-        for (element in equationSplit) {
-            var part = equationSplit[iPart].split(" ")
-            println(part)
-            iPart += 1
-        }
-        println(equationSplit)
-        iEquation += 1
-    }
+    math(equations[iEquation])
+
+}
+
+fun math(equation:String) {
+    var iMath = 0
+
+    var equationParts = equation.split(" ")
+
+    val total = equationParts[0].dropLast(1).toInt()
+    var totalLength = total.toString().length
+
+    var numbersidk = mutableListOf(equation.split(" "))
+    var numbers = equation.drop(totalLength).split(" ")
+    println(numbers)
 }
